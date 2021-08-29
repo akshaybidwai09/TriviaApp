@@ -30,6 +30,38 @@ The [./backend](https://github.com/udacity/FSND/blob/master/projects/02_trivia_a
 1. *./backend/flaskr/`__init__.py`*
 2. *./backend/test_flaskr.py*
 
+## Backend requirements
+To set-up the backend install the following dependencies:
+
+Python 3.9 - Follow instructions to install the latest version of python for your platform in the python docs
+
+Virtual Enviornment - It is recommended that you working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organaized. Instructions for setting up a virual enviornment for your platform can be found in the python docs
+
+PIP Dependencies - Once you have your virtual environment setup and running, install dependencies by naviging to the /backend directory and running:
+
+pip install -r requirements.txt
+This will install all of the required packages we selected within the requirements.txt file.
+
+Key Dependencies
+Flask is a lightweight backend microservices framework. Flask is required to handle requests and responses.
+
+SQLAlchemy is the Python SQL toolkit and ORM we'll use handle the lightweight sqlite database. You'll primarily work in app.py and can reference models.py.
+
+Flask-CORS is the extension we'll use to handle cross origin requests from our frontend server.
+
+Database Setup:
+Use the trivia.psql file provided to restore the database containing the neccesary informationl for this trivia app. Navigate into you backend folder and in the terminal run the following command:
+
+psql trivia < trivia.psql
+Running the server:
+In your terminal run the following command to run the server:
+
+export FLASK_APP=flaskr
+export FLASK_ENV=development  
+flask run 
+The FLASK_ENV=development command will ensure that the server automatically restarts should any changes to the flask app be detected.
+
+
 
 ### Frontend
 
@@ -43,9 +75,35 @@ Pay special attention to what data the frontend is expecting from each API respo
 1. *./frontend/src/components/QuestionView.js*
 2. *./frontend/src/components/FormView.js*
 3. *./frontend/src/components/QuizView.js*
+### Requirements 
+To set-up the backend install the following dependencies:
 
+Installing Node and NPM
+This project depends on Nodejs and Node Package Manager (NPM). Before continuing, you must download and install Node (the download includes NPM) from https://nodejs.com/en/download.
 
-By making notes ahead of time, you will practice the core skill of being able to read and understand code and will have a simple plan to follow to build out the endpoints of your backend API. 
+Installing project dependencies
+This project uses NPM to manage software dependencies. NPM Relies on the package.json file located in the frontend directory of this repository. After cloning, open your terminal and run:
+
+npm install
+Running Your Frontend in Dev Mode
+The frontend app was built using create-react-app. In order to run the app in development mode use npm start. Make sure that the backend server is running at the same time in a seperate CLI to ensure that the trivia app works correctly. Instructions on how to run your backend server available in the Backend dependencies section.
+
+Once you've executed the npm start command and have your backend server running in a seperate window go to your browswer and open http://localhost:3000 to view the Udacitrivia app.
+
+npm start
+Testing
+Testing is conducted using unittest.
+
+In order to run tests navigate to the backend folder and run the following commands in your terminal:
+
+dropdb trivia_test
+createdb trivia_test
+psql trivia_test < trivia.psql
+python test_flaskr.py
+
+The first time you run the tests, omit the dropdb command.
+
+All tests are kept in the test_flaskr.py file and should be maintained as updates are made to app functionality.
 
 
 
