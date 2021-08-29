@@ -96,8 +96,7 @@ To set-up the backend install the following dependencies:
 
 Once you've executed the npm start command and have your backend server running in a seperate window go to your browswer and open http://localhost:3000 to view the Udacitrivia app.
 
-npm start        
-Testing           
+`npm start`               
 Testing is conducted using unittest.
 
 In order to run tests navigate to the backend folder and run the following commands in your terminal:
