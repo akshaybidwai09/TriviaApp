@@ -39,7 +39,7 @@ Virtual Enviornment - It is recommended that you working within a virtual enviro
 
 PIP Dependencies - Once you have your virtual environment setup and running, install dependencies by naviging to the /backend directory and running:
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 This will install all of the required packages we selected within the requirements.txt file.
 
@@ -51,15 +51,18 @@ SQLAlchemy is the Python SQL toolkit and ORM we'll use handle the lightweight sq
 Flask-CORS is the extension we'll use to handle cross origin requests from our frontend server.
 
 Database Setup:
-Use the trivia.psql file provided to restore the database containing the neccesary informationl for this trivia app. Navigate into you backend folder and in the terminal run the following command:
+`Use the trivia.psql` 
 
-psql trivia < trivia.psql
+file provided to restore the database containing the neccesary informationl for this trivia app. Navigate into you backend folder and in the terminal run the following command:
+
+`psql trivia < trivia.psql`
+
 Running the server:
 In your terminal run the following command to run the server:
 
-export FLASK_APP=flaskr
-export FLASK_ENV=development  
-flask run 
+ `export FLASK_APP=flaskr`   
+ `export FLASK_ENV=development`  
+ `flask run` 
 
 The FLASK_ENV=development command will ensure that the server automatically restarts should any changes to the flask app be detected.
 
@@ -80,28 +83,29 @@ Pay special attention to what data the frontend is expecting from each API respo
 ### Requirements 
 To set-up the backend install the following dependencies:
 
-Installing Node and NPM
-This project depends on Nodejs and Node Package Manager (NPM). Before continuing, you must download and install Node (the download includes NPM) from https://nodejs.com/en/download.
+`Installing Node and NPM`     
 
-Installing project dependencies
-This project uses NPM to manage software dependencies. NPM Relies on the package.json file located in the frontend directory of this repository. After cloning, open your terminal and run:
+ This project depends on Nodejs and Node Package Manager (NPM). Before continuing, you must download and install Node (the download includes NPM) from https://nodejs.com/en/download.
 
-npm install
-Running Your Frontend in Dev Mode
-The frontend app was built using create-react-app. In order to run the app in development mode use npm start. Make sure that the backend server is running at the same time in a seperate CLI to ensure that the trivia app works correctly. Instructions on how to run your backend server available in the Backend dependencies section.
+`Installing project dependencies`  
+ This project uses NPM to manage software dependencies. NPM Relies on the package.json file located in the frontend directory of this repository. After cloning, open your terminal and run:
+
+`npm install`  
+ Running Your Frontend in Dev Mode
+ The frontend app was built using create-react-app. In order to run the app in development mode use npm start. Make sure that the backend server is running at the same time in a seperate CLI to ensure that the trivia app works correctly. Instructions on how to run your backend server available in the Backend dependencies section.
 
 Once you've executed the npm start command and have your backend server running in a seperate window go to your browswer and open http://localhost:3000 to view the Udacitrivia app.
 
-npm start
-Testing
+npm start        
+Testing           
 Testing is conducted using unittest.
 
 In order to run tests navigate to the backend folder and run the following commands in your terminal:
 
-dropdb trivia_test
-createdb trivia_test
-psql trivia_test < trivia.psql
-python test_flaskr.py
+`dropdb trivia_test`                           
+`createdb trivia_test`        
+`psql trivia_test < trivia.psql`             
+`python test_flaskr.py`            
 
 The first time you run the tests, omit the dropdb command.
 
