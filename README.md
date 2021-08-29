@@ -40,6 +40,7 @@ Virtual Enviornment - It is recommended that you working within a virtual enviro
 PIP Dependencies - Once you have your virtual environment setup and running, install dependencies by naviging to the /backend directory and running:
 
 pip install -r requirements.txt
+
 This will install all of the required packages we selected within the requirements.txt file.
 
 Key Dependencies
@@ -59,6 +60,7 @@ In your terminal run the following command to run the server:
 export FLASK_APP=flaskr
 export FLASK_ENV=development  
 flask run 
+
 The FLASK_ENV=development command will ensure that the server automatically restarts should any changes to the flask app be detected.
 
 
